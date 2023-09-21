@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/grazzianixf/sdk-react-components.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@grazzianixf"
+  },  
   "author": "Grazziani Xavier",
   "license": "ISC",
   "bugs": {
