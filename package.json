@@ -1,6 +1,6 @@
 {
   "name": "@grazzianixf/sdk-react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "## Fontes",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
