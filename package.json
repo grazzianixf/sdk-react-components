@@ -1,6 +1,6 @@
 {
   "name": "@grazzianixf/sdk-react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "## Fontes",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,7 +14,7 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@grazzianixf"
-  },  
+  },
   "author": "Grazziani Xavier",
   "license": "ISC",
   "bugs": {
