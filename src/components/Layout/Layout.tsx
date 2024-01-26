@@ -1,20 +1,27 @@
 import React from "react";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export interface LayoutProps {
-   children: any[];
+   header: any;
+   content: any;
+   footer: any;
+   user: any;
+   logoutComponent: any;
+   menuComponent: any;
 }
 
 export const Layout = (props: LayoutProps) => {
    return (
       <>
          <header>
-            Header
+            {props.header ? props.header : <Header user={props.user} logoutComponent={props.logoutComponent} menuComponent={props.menuComponent} />}
          </header>
          <main>
-            {...props.children}
+            {props.content}
          </main>
          <footer>
-            Footer
+            {props.footer ? props.footer : <Footer />}
          </footer>
       </>
    );
