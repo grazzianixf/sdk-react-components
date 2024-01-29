@@ -9,6 +9,10 @@ interface SimpleListProps {
 }
 
 const getId = (item: any, idFieldName?: string) => {
+    if (typeof item === "string") {
+        return item
+    }
+
     if (idFieldName) {
         return item[idFieldName]
     } else {
@@ -17,6 +21,10 @@ const getId = (item: any, idFieldName?: string) => {
 }
 
 const getLabel = (item: any, labelFieldName?: string) => {
+    if (typeof item === "string") {
+        return item
+    }
+        
     if (labelFieldName) {
         return item[labelFieldName]
     } else {
