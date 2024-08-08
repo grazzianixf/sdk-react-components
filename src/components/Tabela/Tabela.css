@@ -1,0 +1,58 @@
+.divExterna {
+    overflow-x: auto;
+}
+
+.tabelaSGP {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabelaSGP caption {
+    font-size: 20.16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tabelaSGP th {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0c326f ;
+    color: white;    
+}
+
+.tabelaSGP td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;    
+}
+
+.tabelaSGP tr:nth-child(even) {
+    background-color: #f2f2f0;
+}
+
+.tabelaSGP tbody tr:hover {
+    background-color: #dde;
+}
+
+.tabelaSGP tfoot td {
+    border-style: hidden;
+    border-top: 1px solid #ddd;
+}
+
+.linkSemEstilo {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.linkSemEstilo:visited,
+.linkSemEstilo:hover {
+    color: white !important;
+}
+
+.tabelaRodapePaginacao td {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
