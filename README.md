@@ -8,6 +8,8 @@ https://dev.to/nasheomirro/comment/239nj
 
 https://medium.com/@debshish.pal/publish-a-npm-package-locally-for-testing-9a00015eb9fd
 
+https://dev.to/erinbush/npm-linking-and-unlinking-2h1g
+
 ## Comandos
 
 - "build" do projeto
