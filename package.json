@@ -39,5 +39,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "typescript-plugin-css-modules": "^5.1.0"
+  }
 }
