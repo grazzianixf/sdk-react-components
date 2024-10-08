@@ -23,7 +23,7 @@ const DropDownList = (props: DropDownListProps) => {
         if (onChange && typeof onChange === 'function') {
             //está sendo feito desta maneira porque como padrao o datalist exibe na opção tanto o value como o label, por isso foi feito o uso do atributo data-value
             const value = document.querySelector(`#${e.target.list.id} [value="${e.target.value}"]`)?.getAttribute('data-value');        
-            onChange(e.target.value);
+            onChange(value);
         }
     }
 
