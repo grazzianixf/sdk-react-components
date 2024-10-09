@@ -2,7 +2,7 @@ import React from "react";
 import { User } from "..";
 
 export interface HeaderProps {
-   name?: string;
+   name?: string | null;
    user?: any;
    logoutComponent?: any;
    menuComponent?: any;
@@ -10,7 +10,7 @@ export interface HeaderProps {
 
 export const Header = (props: HeaderProps) => {
    return <div>
-      Header: {props.name}
+      {props.name}
       <br />
       <User uid={props.user?.uid} email={props.user?.email} name={props.user?.name} />
       {props.logoutComponent}

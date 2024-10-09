@@ -4,6 +4,7 @@ import { Header } from "./Header";
 
 export interface LayoutProps {
    header: any;
+   headerName?: string;
    content: any;
    footer: any;
    user: any;
@@ -15,7 +16,16 @@ export const Layout = (props: LayoutProps) => {
    return (
       <>
          <header>
-            {props.header ? props.header : <Header user={props.user} logoutComponent={props.logoutComponent} menuComponent={props.menuComponent} />}
+            {
+               props.header
+                  ? props.header
+                  : <Header
+                     name={props.headerName ? props.headerName : null}
+                     user={props.user}
+                     logoutComponent={props.logoutComponent}
+                     menuComponent={props.menuComponent}
+                  />
+            }
          </header>
          <main>
             {props.content}
