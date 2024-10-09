@@ -5,3 +5,4 @@ export { ErrorPage } from "./Error";
 export { SimpleList } from "./List";
 export { default as DropDownList  } from "./DropDownList"
 export { default as YearMonthSelector  } from "./YearMonth"
+export { default as ViewHeader } from "./ViewHeader"
