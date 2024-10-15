@@ -3,13 +3,13 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export interface LayoutProps {
-   header: any;
+   header?: any;
    headerName?: string;
    content: any;
-   footer: any;
-   user: any;
-   logoutComponent: any;
-   menuComponent: any;
+   footer?: any;
+   user?: any;
+   logoutComponent?: any;
+   menuComponent?: any;
 }
 
 export const Layout = (props: LayoutProps) => {
@@ -20,7 +20,7 @@ export const Layout = (props: LayoutProps) => {
                props.header
                   ? props.header
                   : <Header
-                     name={props.headerName ? props.headerName : null}
+                     name={props.headerName}
                      user={props.user}
                      logoutComponent={props.logoutComponent}
                      menuComponent={props.menuComponent}

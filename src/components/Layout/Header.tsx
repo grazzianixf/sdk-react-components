@@ -11,9 +11,9 @@ export interface HeaderProps {
 export const Header = (props: HeaderProps) => {
    return (
       <div style={{ display: "flex", flexDirection: "column" }} >
-         <span>
+         <h1>
             {props.name}
-         </span>
+         </h1>
          <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             <User uid={props.user?.uid} email={props.user?.email} name={props.user?.name} />
             {props.logoutComponent}
