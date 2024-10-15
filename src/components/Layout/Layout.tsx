@@ -15,7 +15,7 @@ export interface LayoutProps {
 export const Layout = (props: LayoutProps) => {
    return (
       <>
-         <header>
+         <header style={{padding: "3pt"}}>
             {
                props.header
                   ? props.header
@@ -27,7 +27,7 @@ export const Layout = (props: LayoutProps) => {
                   />
             }
          </header>
-         <main>
+         <main style={{padding: "3pt"}}>
             {props.content}
          </main>
          <footer>

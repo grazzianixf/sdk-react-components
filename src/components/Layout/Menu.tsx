@@ -16,7 +16,9 @@ export const Menu = (props: MenuProps) => {
                 {
                     props?.items
                         .map((item: MenuItem, index) =>
-                            <li style={{ float: "left", padding: "5pt" }} key={item.key || index}>
+                            <li
+                                style={{ float: "left", padding: "5pt" }}
+                                key={item.key || index}>
                                 {item.element}
                             </li>
                         )}
