@@ -1,4 +1,5 @@
 import React from "react";
+import "./Menu.css"
 
 export interface MenuItem {
     key?: string;
@@ -10,19 +11,13 @@ export interface MenuProps {
 }
 
 export const Menu = (props: MenuProps) => {
+
     return (
-        <nav>
-            <ul style={{ listStyleType: "none", margin: 0, padding: 0, overflow: "hidden" }}>
-                {
-                    props?.items
-                        .map((item: MenuItem, index) =>
-                            <li
-                                style={{ float: "left", padding: "5pt" }}
-                                key={item.key || index}>
-                                {item.element}
-                            </li>
-                        )}
-            </ul>
-        </nav>
+        <div className="topnav" >
+            {
+                props?.items
+                    .map((item: MenuItem, index) => item.element)
+            }
+        </div>
     )
 }
