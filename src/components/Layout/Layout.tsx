@@ -7,6 +7,7 @@ export interface LayoutProps {
    header?: any;
    headerName?: string;
    content: any;
+   card?: any;
    footer?: any;
    user?: any;
    logoutComponent?: any;
@@ -16,7 +17,7 @@ export interface LayoutProps {
 export const Layout = (props: LayoutProps) => {
    return (
       <>
-         <header style={{ padding: "3pt" }}>
+         <header>
             {
                props.header
                   ? props.header
@@ -30,8 +31,17 @@ export const Layout = (props: LayoutProps) => {
                props.menuComponent
             }
          </header>
-         <main style={{ padding: "3pt" }}>
-            {props.content}
+         <main className="row">
+            <div className="leftcolumn">
+               <div className="content">
+                  {props.content}
+               </div>
+            </div>
+            <div className="rightcolumn">
+               <div className="card">
+                  {props.card}
+               </div>
+            </div>
          </main>
          <footer>
             {props.footer ? props.footer : <Footer />}
