@@ -37,7 +37,7 @@ body {
 }
 
 /* Clear floats after the columns */
-.row::after {
+main::after {
     content: "";
     display: table;
     clear: both;

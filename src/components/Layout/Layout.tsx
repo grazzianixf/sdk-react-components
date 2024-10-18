@@ -20,18 +20,18 @@ export const Layout = (props: LayoutProps) => {
          <header>
             {
                props.header
-                  ? props.header
-                  : <Header
-                     name={props.headerName}
-                     user={props.user}
-                     logoutComponent={props.logoutComponent}
-                  />
+               ||
+               <Header
+                  name={props.headerName}
+                  user={props.user}
+                  logoutComponent={props.logoutComponent}
+               />
             }
             {
                props.menuComponent
             }
          </header>
-         <main className="row">
+         <main>
             <div className="leftcolumn">
                <div className="content">
                   {props.content}
@@ -44,7 +44,11 @@ export const Layout = (props: LayoutProps) => {
             </div>
          </main>
          <footer>
-            {props.footer ? props.footer : <Footer />}
+            {
+               props.footer
+               ||
+               <Footer />
+            }
          </footer>
       </>
    );
