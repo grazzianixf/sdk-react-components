@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import "./Layout.css";
 
 export interface LayoutProps {
    header?: any;
@@ -15,7 +16,7 @@ export interface LayoutProps {
 export const Layout = (props: LayoutProps) => {
    return (
       <>
-         <header style={{padding: "3pt"}}>
+         <header style={{ padding: "3pt" }}>
             {
                props.header
                   ? props.header
@@ -23,11 +24,13 @@ export const Layout = (props: LayoutProps) => {
                      name={props.headerName}
                      user={props.user}
                      logoutComponent={props.logoutComponent}
-                     menuComponent={props.menuComponent}
                   />
             }
+            {
+               props.menuComponent
+            }
          </header>
-         <main style={{padding: "3pt"}}>
+         <main style={{ padding: "3pt" }}>
             {props.content}
          </main>
          <footer>
