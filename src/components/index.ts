@@ -6,3 +6,5 @@ export { SimpleList } from "./List";
 export { default as DropDownList  } from "./DropDownList"
 export { default as YearMonthSelector  } from "./YearMonth"
 export { default as ViewHeader } from "./ViewHeader"
+export { CloseButton } from "./CloseButton"
+export { MessageBox } from "./MessageBox"
