@@ -1,28 +1,24 @@
-import React from 'react'
-import { CloseButton } from '../CloseButton'
-import "./MessageBox.css"
+import React from 'react';
+import { CloseButton } from '../CloseButton';
+import "./MessageBox.css";
 
 export interface MessageBoxProps {
     textMessage: string;
+    visible: boolean;
+    onCloseButton: any;
 }
 
 export const MessageBox = (props: MessageBoxProps) => {
-    const { textMessage } = props;
-
-    const closeMessageBox = () => {
-        let messageBox = document.getElementById("messageBox");
-        if (messageBox) {
-            messageBox.className = messageBox.className.replace("show", "");
-        }
-    }
+    const { textMessage, visible, onCloseButton } = props;
 
     return (
         <div
             id="messageBox"
             className='messageBox'
+            style={{ visibility: visible ? 'visible' : 'hidden' }}
         >
             <strong>{textMessage}</strong>
-            <CloseButton onClick={closeMessageBox} />
+            <CloseButton onClick={onCloseButton} />
         </div>
     )
 }
