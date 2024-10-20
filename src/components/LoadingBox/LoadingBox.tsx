@@ -1,5 +1,6 @@
 import React from 'react'
 import "./LoadingBox.css";
+import { Spinner } from './Spinner';
 
 export interface LoadingBoxProps {
     isOpen: boolean;
@@ -25,6 +26,8 @@ export const LoadingBox = (props: LoadingBoxProps) => {
             // onClick={off}
         >
             <div className='loadingBoxContent'>
+                <Spinner />
+                <br />
                 {content}
             </div>
         </div>
