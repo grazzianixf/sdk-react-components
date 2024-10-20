@@ -11,41 +11,46 @@ export interface LayoutProps {
    footer?: any;
    user?: any;
    logoutComponent?: any;
+   loginComponent?: any;
    menuComponent?: any;
 }
 
 export const Layout = (props: LayoutProps) => {
+
+   const { header, headerName, user, loginComponent, logoutComponent, menuComponent, content, card, footer} = props;
+
    return (
       <>
          <header>
             {
-               props.header
+               header
                ||
                <Header
-                  name={props.headerName}
-                  user={props.user}
-                  logoutComponent={props.logoutComponent}
+                  name={headerName}
+                  user={user}
+                  loginComponent={loginComponent}
+                  logoutComponent={logoutComponent}
                />
             }
             {
-               props.menuComponent
+               menuComponent
             }
          </header>
          <main>
             <div className="leftcolumn">
                <div className="content">
-                  {props.content}
+                  {content}
                </div>
             </div>
             <div className="rightcolumn">
                <div className="card">
-                  {props.card}
+                  {card}
                </div>
             </div>
          </main>
          <footer>
             {
-               props.footer
+               footer
                ||
                <Footer />
             }
