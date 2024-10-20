@@ -1,4 +1,4 @@
-#messageBox {
+.messageBox {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
@@ -14,8 +14,20 @@
     font-size: 17px;
 }
 
-#messageBox.show {
-    visibility: visible;
+.messageBox.error {
+    background-color: #f44336;
+}
+
+.messageBox.success {
+    background-color: #04AA6D;
+}
+
+.messageBox.info {
+    background-color: #2196F3;
+}
+
+.messageBox.warning {
+    background-color: #ff9800;
 }
 
 @-webkit-keyframes fadein {
