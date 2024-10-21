@@ -7,9 +7,13 @@ export interface UserProps {
 }
 
 const User = ({ uid, name, email }: UserProps) => {
+    if (!uid && !name && !email) {
+        return;
+    }
+
     return (
         <div>
-            UID: {uid}, Name: {name}, E-mail: {email}
+            User: {name || email || uid}
         </div>
     );
 };

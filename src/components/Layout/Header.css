@@ -4,9 +4,17 @@
     text-align: center;
     background: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header h1 {
     font-size: 30px;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
