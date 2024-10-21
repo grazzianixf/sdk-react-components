@@ -19,7 +19,7 @@ export const Header = (props: HeaderProps) => {
          <h1>
             {name}
          </h1>
-         <div>
+         <div className="headerInternal">
             <User uid={user?.uid} email={user?.email} name={user?.name} />
             {
                !!user ? logoutComponent : loginComponent

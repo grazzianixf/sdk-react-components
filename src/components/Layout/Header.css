@@ -13,7 +13,7 @@
     font-size: 30px;
 }
 
-.header div {
+.headerInternal {
     display: flex;
     flex-direction: column;
     align-items: center;
