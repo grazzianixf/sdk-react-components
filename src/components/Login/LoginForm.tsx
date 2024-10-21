@@ -2,7 +2,6 @@ import React from 'react';
 import './LoginForm.css';
 
 export const ID_MODAL_LOGIN = "modalLogin"
-export const ID_FORM_LOGIN = "modalLogin"
 
 export interface LoginFormProps {
     visible: boolean;
