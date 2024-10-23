@@ -2,12 +2,13 @@ import React from "react";
 
 export interface ButtonProps {
   label: string;
+  onClick: any
 }
 
 const Button = (props: ButtonProps) => {
-  const { label, ...rest } = props;
+  const { label, onClick, ...rest } = props;
 
-  return <button {...rest}>{label}</button>;
+  return <button onClick={onClick} {...rest}>{label}</button>;
 };
 
 export default Button;

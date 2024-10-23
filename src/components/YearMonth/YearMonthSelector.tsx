@@ -1,33 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Button from "../Button";
+
+import { TimeCustom, YearMonth } from '@grazzianixf/sdk';
 
 export interface YearMonthSelectorProps {
     year?: number,
-    month?: number
+    month?: number,
+    onChange?: any
 }
 
-export default function YearMonthSelector({ year, month }: YearMonthSelectorProps) {
-    console.log('React', React)
-    useState()
-    // const [labelYear, setLabelYear] = useState<number>(1);
-    // const [labelMonth, setLabelMonth] = useState<number>(1);
+const YEAR_MONTH_INITIAL_STATE = {
+    year: TimeCustom.getCurrentYear(),
+    month: TimeCustom.getCurrentMonth()
+}
 
-    // useEffect(() => {
-    //     setLabelYear(year);
-    //     setLabelMonth(month);
+const YearMonthSelector = (props: YearMonthSelectorProps) => {
 
-    //     console.log('executou sem parametros')
+    const { year, month, onChange } = props;
 
-    //     return () => undefined
-    // }, [year, month])
+    const [yearMonth, setYearMonth] = React.useState(YEAR_MONTH_INITIAL_STATE);
+
+    React.useEffect(() => {
+        if (year && month) {
+            setYearMonth({ year, month });
+        }
+
+        return () => undefined
+    }, [year, month])
+
+    React.useEffect(() => {
+        if (onChange) {
+            onChange(new YearMonth(yearMonth.year, yearMonth.month));
+        }
+
+        return () => undefined
+    }, [yearMonth])
+
+    const handlePreviousNext = (type: string) => {
+        let ym = new YearMonth(yearMonth.year, yearMonth.month);
+
+        if (type === 'P') {
+            ym.previous();
+        } else if (type === 'N') {
+            ym.next();
+        }
+
+        setYearMonth({ year: ym.year, month: ym.month });
+    }
 
     return (
-        <>
-            <Button label="<<" />
-            {/* {labelYear + ' / ' + labelMonth} */}
-            <Button label=">>" />
-        </>
+        <div style={{display: "flex", flexDirection: "row"}}>
+            <Button label="<<" onClick={() => handlePreviousNext('P')} />
+            <span style={{padding: "2px"}}>
+                {yearMonth?.year + ' / ' + yearMonth?.month}
+            </span>
+            <Button label=">>" onClick={() => handlePreviousNext('N')} />
+        </div>
     );
-};
+}
 
-// export default YearMonthSelector;
+
+export default YearMonthSelector;
