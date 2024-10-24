@@ -2,6 +2,8 @@
 
 ## Referências
 
+https://docs.github.com/pt/packages/working-with-a-github-packages-registry/working-with-the-npm-registry
+
 https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe
 
 https://dev.to/nasheomirro/comment/239nj
