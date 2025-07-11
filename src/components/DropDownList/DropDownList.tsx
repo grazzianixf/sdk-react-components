@@ -7,6 +7,7 @@ export interface DropDownListItemProps {
 
 export interface DropDownListProps {
     id: string;
+    value: any; //nesse parametro na verdade deve ser informado o label
     items: DropDownListItemProps[];
     placeholder?: string;
     onChange?(value: any): any;
@@ -16,14 +17,14 @@ const DEFAULT_PLACEHOLDER = "Selecione uma opção";
 
 const DropDownList = (props: DropDownListProps) => {
 
-    const { id, placeholder, items, onChange } = props;
+    const { id, value, placeholder, items, onChange } = props;
     const listName = `${id}s`;
 
     const handleOnChange = (e: any) => {
         if (onChange && typeof onChange === 'function') {
             //está sendo feito desta maneira porque como padrao o datalist exibe na opção tanto o value como o label, por isso foi feito o uso do atributo data-value
-            const value = document.querySelector(`#${e.target.list.id} [value="${e.target.value}"]`)?.getAttribute('data-value');        
-            onChange(value);
+            const dataValue = document.querySelector(`#${e.target.list.id} [value="${e.target.value}"]`)?.getAttribute('data-value');        
+            onChange(dataValue);
         }
     }
 
@@ -34,6 +35,7 @@ const DropDownList = (props: DropDownListProps) => {
                 list={listName}
                 name={id}
                 id={id}
+                value={value}
                 placeholder={placeholder || DEFAULT_PLACEHOLDER}
                 onChange={handleOnChange}
             />
