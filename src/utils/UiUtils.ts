@@ -3,7 +3,7 @@ const handleStateField = (setFunction: Function, fieldName: string, value: any) 
 export const handleStateDropDownList = (setFunction: Function, fieldName: string, ref: any) => handleStateField(setFunction, fieldName, ref)
 
 export const handleStateInputText = (setFunction: Function, fieldName: string, ref: any) => handleStateField(setFunction, fieldName, ref.target.value)
-export const handleStateInputNumber = (setFunction: Function, fieldName: string, ref: any) => handleStateField(setFunction, fieldName, ref.target.value)
+export const handleStateInputNumber = (setFunction: Function, fieldName: string, ref: any) => handleStateField(setFunction, fieldName, Number(ref.target.value))
 export const handleStateInputCheckbox = (setFunction: Function, fieldName: string, ref: any) => handleStateField(setFunction, fieldName, ref.target.checked)
 
 // module.exports = {
